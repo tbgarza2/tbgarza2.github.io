@@ -13,9 +13,9 @@
  */
 
 // 1. declaration //
-var myName; // var declares a global scope variable
+var myName;
 
-/**
+/*
  * At the declaration phase, the variable myName is undefined because we have NOT initialized
  * it to anything
  */
@@ -32,6 +32,7 @@ console.log(myName); // prints => bob
 // NOTE: We can assign and re-assign anything to a variable - we cannot do this with constants //
 var myVariable = 1;
 var myVariable = true;
+<<<<<<< HEAD
 myVariable = "someString";
 
 /** With the additons of ES6, const and let were introduced to be able to declare variables with 
@@ -73,3 +74,4 @@ console.log(y); // prints => 2
 //console.log(z); // this will throw an ReferenceError
 const z = 3;
 console.log(z); // prints => 3
+myVariable = "someString";
