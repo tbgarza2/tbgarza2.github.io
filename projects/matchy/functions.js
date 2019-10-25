@@ -52,6 +52,7 @@ function remove(animals, name) {
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal) {
+<<<<<<< HEAD
     if(animal.name.length > 0 && animal.species.length > 0 /*&& animal.hasOwnProperty(name)*/ && !animals.some((ele) => (ele.name === animal.name))) {
 //        for(let i = 0; i <animals.length; i++) {
 //            if (animals[i].name === animal.name) {
@@ -60,6 +61,12 @@ function add(animals, animal) {
          } 
        
   
+=======
+    if(animal.name.length > 0 && animal.species.length > 0 && animal.hasOwnProperty(name)) {
+        animals.push(animal);
+    }
+}
+>>>>>>> bd735a569053c2c0c27a35c062553d6e40aecf31
 
 
 /**

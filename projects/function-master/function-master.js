@@ -172,10 +172,10 @@ for (let key in object) {
 //////////////////////////////////////////////////////////////////////
 
 function dedup(array) {
-let unique = [];
-array.sort((a, b) => {if (a !== b){ unique.push(a);
-}
-});
+let unique = [...new Set(array)];
+//array.sort((a, b) => {if (a !== b){ unique.push(b);
+//}
+//} ,0);
 return unique;
 }
 
