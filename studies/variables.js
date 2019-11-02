@@ -67,11 +67,11 @@ console.log(x); // prints => undefined
 var x = 1; 
 console.log(x); // prints => 1
 
-//console.log(y); // this will throw an ReferenceError
+//console.log(y); // this will throw an ReferenceError and will not be hoisted
 let y = 2;
 console.log(y); // prints => 2
 
-//console.log(z); // this will throw an ReferenceError
+//console.log(z); // this will throw an ReferenceError and will not be hoisted
 const z = 3;
 console.log(z); // prints => 3
 myVariable = "someString";

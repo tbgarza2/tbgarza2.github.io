@@ -16,22 +16,26 @@
  * 
  */
  
-// 1. Declaration of a Function //
+// 1. Declaration of a Function // Can be Hoisted
 //In order to declare a named function, the function key word needs to be followed by functon name and parameters.
+console.log(add(1, 2)); // prints => 3 declared function can be Hoisted
 function add(a, b) { 
     return a + b;   // Code block of the function
-};
+}
+console.log(add(1, 2)); //prints => 3
  
 // 2. Invocation of a Function //
 // In order to invoke or call the function type the name of function with added arguments.
-add(2, 3) // returns 5
+add(2, 3); // returns 5
 console.log(add(2,3)); // prints => 5
  
-// 3. Assigning a Function //
+// 3. Function Expression - Assigning a Function to Variable // Cannot be Hoisted
 // Functions can be assigned using var, let, or const
+//console.log(adder(1, 2)); // will throw a Reference Error => not Hoisted
  let adder = function (a, b) { 
     return a + b;   // Code block of the function
 };
+console.log(adder(1, 2)); // prints => 3
 // Or a called function can be stored as a variable
 let plus = add(2, 3);
 

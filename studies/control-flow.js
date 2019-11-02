@@ -12,25 +12,25 @@
 // 1. If Statement //
 
 if (true) { // condition statement in ()
-    return true // code block that will run if condition statement is met
-};
+    console.log(true); // code block that will run if condition statement is met
+}
 
 // 2. Else Statement //
 if (true) { // condition statement in ()
-    return true // code block that will run if condition statement is met
+    console.log(true); // code block that will run if condition statement is met
 } else {
-    return false // code block that runs if condition statement is not met
-};
+    console.log(false); // code block that runs if condition statement is not met
+}
 
 // 3. Else-If Statement //
 let x = 1;
 if ( x === 1) { // condition statement 1 in ()
-    return true // code block that will run if condition statement 1 is met
+    console.log(true); // code block that will run if condition statement 1 is met
 } else if (x === 2) { // condition statement 2 in ()
-    return 1 // code block that will run if condition statement 2 is met
+    console.log(1); // code block that will run if condition statement 2 is met
 } else {
-    return false // code block that runs if both condition statements are not met
-};
+    console.log(false); // code block that runs if both condition statements are not met
+}
 
 // 4. Switch Statement //
 switch (x) {
@@ -43,4 +43,4 @@ switch (x) {
     default: // default case if other cases are not met
         console.log('Unknown'); // code block run if none of the cases have been met
     break;
-};
+}

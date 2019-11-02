@@ -19,18 +19,21 @@
 - -Infinity; // number value of negative infinity
 
 // 2. Complex Data Types //
-- Array; // high level lists of data that can contain primitve and complex data
-- Object; // a container of key/value(primitive or complex data) pairs of data
-- Function; // a sub program that performs a task when invoked
+- Array; [1, "2", true, {one: 1}, function so(){ console.log("so")}];// high level lists of data that can contain primitve and complex data
+- Object; {one: 1}// a container of key/value(primitive or complex data) pairs of data
+- Function; function so(){ console.log("so")}// a sub program that performs a task when invoked
 
-// 3. Copy by Value //
-let greet = "hello";
-let holla = greet; // "hello" copied to variable holla from greet
-console.log(greet); // prints => 'hello'
-console.log(greet);  // prints => 'hello'
+// 3. Copy by Value // primitive data types are copied to varialbles with = sign
+// Different variables can be assigned the same data type of another variable with = sign
+let greet = "hello"; // primitive data assigned to varialbe
+let holla = greet; // "hello" copied to variable holla from greet 
+console.log(greet); // prints => 'hello' 
+console.log(holla);  // prints => 'hello' copied value into variable holla
 
-// 4. Copy by Reference //
-let arr = [1, "2", true, [3, false], {x:8}];
+// 4. Copy by Reference // complex data types are copied by reference with the = sign
+let arr = [1, "2", true, [3, false], {x:8}]; // complex data assigned to varialbe
 let newArr = arr; // the array arr has been copied to newArr
 console.log(newArr[3]); // the nested array in arr can be accessed by referencing 4th element
+// newArr does not house the array in memory, but has the refencing to access elements in arr
+
 

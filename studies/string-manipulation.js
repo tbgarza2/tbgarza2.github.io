@@ -8,8 +8,10 @@
  *  
  */
 
-// 1. Determine length of string //
-console.log("Hello World".length); // prints => 11
+// 1. Changing string to an array using split() //
+console.log("Hello World".split()); // prints => [ 'Hello World' ]
+console.log("Hello World".split("")) // prints => [ 'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd' ]
+console.log("Hello World".split(" ")) // prints => [ 'Hello', 'World' ]
 
 // 2. Index character in string with bracket notation //
 console.log("Hello World"[4]); // prints => o
@@ -25,8 +27,15 @@ console.log(greet.slice(2)); // prints => llo World
 // 5. Replacing elements from string with replace() //
 console.log(greet.replace(/l/g, 'j')); // prints => Hejjo Worjd
 
-// 5. Adding strings or elements to strings //
+// 6. Adding strings or elements to strings using + sign or concat() //
 console.log(greet + '!'); // prints => Hello World!
 console.log(greet.concat("!")); // prints => Hello World!
 
+function greeting(str) { //function to concat strings using += 
+  let newGreet = str += "!";
+  return newGreet;
+}
+console.log(greeting(greet)); // prints => Hello World!
+console.log(greeting(greeting(greet))); // prints => Hello World!!
+console.log(greeting(greeting(greeting(greet)))); // prints => Hello World!!!
 
