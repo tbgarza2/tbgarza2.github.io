@@ -104,25 +104,73 @@ console.log(
 friendFirstLetterCount(customers, "Doris Smith", "B"));
 
 var friendsCount = function(array, name){
-    let friends = [];
-    for (let k=0; k<array.length; k++){
-        for(let j=0; j<array[k].friends.name.length; j++){
-        if(array[k].friends.name[j].includes(name)){
-            friends.push(array[k].name);
-            return friends;
+    let friends = []; // empty array to gather friends names from 
+    for (let k=0; k<array.length; k++){ //loop to go through array to get to obj element
+        for(let j=0; j<array[k].friends.length; j++){ // loop to go through the friends array in each object within main array
+        if(array[k].friends[j].name === name){ // test to see if friends array contains given name 
+            // console .log(array[k].friends[j].name);
+            friends.push(array[k].name); // if statement true then push the obj element's name value into empty array
+            // return friends; // return friends array back 
         }    
         }
     }
-    console.log(friends);
-    return friends;
+    // console.log(friends);
+    return friends; // return friends array outside of loop (not sure if I need this)
 };
 friendsCount(customers, "Olga Newton");
 
 var topThreeTags = function(array){
-    
+    let arrTags = [];
+ let newTags =  _.reduce(array,function(prev,curr,i){
+      if(curr.tags !== undefined){
+          arrTags.push(curr.tags);
+          // flatten the nesetd arrays
+      }
+       return  [].concat(...arrTags);
+ });
+ let tags = _.reduce(newTags,function(prev,curr){
+        //   console.log(prev);
+           if(prev[curr] === undefined){
+               prev[curr] = 1;
+           } else {
+               prev[curr] += 1;
+           } return prev;
+},{});
+var newArray = [];
+_.each(tags,function(count,word,object){
+    newArray.push([word,count]);
+});
+// sort our array highest to lowest
+ newArray.sort(function(a,b){
+   return b[1] - a[1];
+ });
+// console.log(newArray);
+ var final = [];
+ for(var i = 0; i < 3; i++){
+     final.push(newArray[i][0]);
+ } return final;
 };
 
-var genderCount = function(){
+topThreeTags(customers);
+
+var genderCount = function(array){ 
+    let male = 0;
+    let female = 0;
+    let nonBinary = 0;
+    return  _.reduce(array, function(prev, customerObj, i){
+        if (customerObj.gender === "male"){
+            male += 1;
+        } else if (customerObj.gender === "female"){
+            female += 1;
+        } else{
+            nonBinary += 1;
+        }
+        return {
+            male,
+            female,
+            "non-binary": nonBinary
+        };
+    }, 0);
     
 };
 

@@ -69,4 +69,18 @@ console.log(addFive(4)); // prints => 12
 console.log(addFive(3)); // prints => 11 
 
 
+// 6. Taking arguments and returning values // Functions can take in arguments outlined as paramerter when declared or expressed
+// Function can alos return values either based on arguments taken or not.
 
+function sayYo(){ // no parameters are requested
+    console.log("Yo"); // side effect of console logging
+} // since no return statement with return value, function call returns undefined
+console.log(sayYo()); // prints => Yo and returns undefined
+console.log(sayYo(10)); // prints => Yo and returns undefined, the argument in parentheses is ignored since no parameters are requested
+
+function concatWords(word1, word2){ // two parameters requested
+    return word1 + " " + word2; // function will return a concatenated string of two strings combined
+}
+console.log(concatWords("Hi", "there!")); // prints => Hi there! The two argument strings are concatenated
+console.log(concatWords("Hi", "there!", "Johnny")); // prints => Hi there! The two argument strings are concatenated
+// The third argument is ignored since the function only requests two parameters.

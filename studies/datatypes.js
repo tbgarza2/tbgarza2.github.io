@@ -8,17 +8,17 @@
  * 
  */
 
-// 1. Primitive Data Types //
-- Number;  1, 3, 500, 7.01; // any number value
+// 1. Primitive Data Types // Can be accessed by assigning to a variable or typing data when needed
+- Number;  1, 3, 500, 7.01; let num = 1;// any number value, if number 1 is needed, type 1 wherever 1 is required or assign 1 to a variable
 - String; "hi"; '73#$'; // any characters typed between single quotes ('') or double quotes("").
 - Boolean; true; false;// true or false 
-- undefined; // a value that is not defined
-- null; // no value at all 
-- NaN; // number type that is "not a number"
-- Infinity; // number value of infinity
-- -Infinity; // number value of negative infinity
+- undefined; var stuff; console.log(stuff); // a value that is not defined, stuff console logged will be undefined
+- null; let x = null; // no value at all, console logged x will be null
+- NaN; let y = NaN; // number type that is "not a number", console logged y will be NaN
+- Infinity; stuff = Infinity; // number value of infinity, stuff console logged will be a value of Infinity
+- -Infinity; stuff = -Infinity; // number value of negative infinity, stuff console logged will be a value of -Infinity
 
-// 2. Complex Data Types //
+// 2. Complex Data Types // Can be accessed by assigning to a variable or typing data when needed
 - Array; [1, "2", true, {one: 1}, function so(){ console.log("so")}];// high level lists of data that can contain primitve and complex data
 - Object; {one: 1}// a container of key/value(primitive or complex data) pairs of data
 - Function; function so(){ console.log("so")}// a sub program that performs a task when invoked
